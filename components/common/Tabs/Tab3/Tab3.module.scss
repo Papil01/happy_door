@@ -1,0 +1,135 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid grayscale($color: #000000);
+}
+.menu {
+    display: flex;
+    width: 300px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 30px;
+    // border: 1px solid white;
+}
+
+.container{
+    
+    // height: 100%;
+    // border: 1px solid white;
+
+    
+}
+.lightningRed{
+    // position: absolute;
+    left: 13.12%;
+    right: 78.99%;
+    top: 17.63%;
+    bottom: 60.92%;
+    // height: 200px;
+    // background: #EA552B;
+// transform: matrix(0.87, 0.5, -0.5, 0.87, 0, 0);
+}
+.title{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 100px;
+line-height: 86px;
+display: flex;
+align-items: center;
+    // font-size: 60px ;
+    // font-weight: bolder;
+    // width: 450px;
+    height: 250px;
+    position: absolute;
+    left: 9.78%;
+    right: 50.72%;
+    top: 20.55%;
+    bottom: 51.47%;
+    
+    // 
+  
+
+}
+ .G31{
+    margin-top: 20px;
+    position: absolute;
+    width: 368.92px;
+    height: 329.43px;
+    left: 277.24px;
+    top: 420.57px;
+    // border: 1px solid white;
+    }
+
+ .yellowbox{
+    position: absolute;
+left: 10.19%;
+right: 34.99%;
+top: 85.25%;
+bottom: 0%;
+background: #FFCD00;
+box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 20px 20px 0px 0px;
+color: #000000;
+display: flex;
+flex-direction: column;
+ padding: 30px;
+
+ font-family: 'Poppins';
+font-style: normal;
+font-weight: 900;
+font-size: 50px;
+line-height: 112%;
+ }
+
+ .bContainer{
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .details{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 100px;
+    margin-right: 100px;
+    color: whitesmoke;
+    & >h1{
+        color: white;
+    }
+
+    & input{
+        width: 350px;
+        height: 50px;
+        margin-top: 20px;
+        border-radius: 15px;
+        padding: 10px;
+    }
+ }
+ .button{
+    display: flex;
+    height: 40px;
+    width: 200px;
+    border-radius: 15px;
+    background-color: white;
+    justify-content: space-between;
+    text-align: center;
+    // padding: 5px;
+    margin-top: 300px;
+    margin-left: 50px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 20px;
+    & >h2{
+        position: relative;
+       right: 60px;
+
+    }
+    & .yBtn{
+        background-color: #FFCD00;
+        height: 40px;
+        width: 20%;
+        align-self: flex-start;
+        border-radius: 15px;
+    }
+ }

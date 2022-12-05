@@ -3,7 +3,7 @@
     justify-content: space-between;
     padding: 20px;
     border-bottom: 1px solid grayscale($color: #000000);
-    
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .menu {
     display: flex;
@@ -90,6 +90,7 @@ line-height: 112%;
  }
 
  .details{
+    // border: 1px solid whitesmoke;
     display: flex;
     flex-direction: column;
     width: 400px;
@@ -98,6 +99,7 @@ line-height: 112%;
     color: whitesmoke;
     & >h1{
         color: white;
+        margin: auto;
     }
 
     & input{
@@ -147,13 +149,13 @@ line-height: 112%;
     width: 200px;
     border-radius: 15px;
     background-color: white;
-    justify-content: space-between;
-    text-align: center;
+    // justify-content: space-between;
+    // text-align: center;
     // padding: 5px;
     margin-top: 80px;
     margin-left: 100px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 20px;
+    border-radius: 20px;
     & >h2{
         position: relative;
        right: 60px;
@@ -162,9 +164,8 @@ border-radius: 20px;
     & .yBtn{
         background-color: #FFCD00;
         height: 40px;
-        width: 80%;
-        // border: 1px solid black;
-        // align-self: flex-start;
+        width: 100%;
+        align-self: flex-start;
         border-radius: 15px;
     }
  }

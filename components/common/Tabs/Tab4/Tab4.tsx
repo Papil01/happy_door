@@ -37,11 +37,32 @@ const Tab4 = ({handleNext}:props) => {
             </div>
             <div className={s.details} >
                 <h1>Gueste Details</h1>
-                <input placeholder='Name' />
-                <input placeholder='Mobile' />
-                <input placeholder='Email Id' />
-                <input placeholder='Name' />
-                <div className={s.button} onClick={handleNext} > <div className={s.yBtn} ></div> <h2>Next</h2></div>
+                <div className={s.dform}  >
+                  <p>Guest 1</p>
+                  <input placeholder='Name' />
+                  <div className={s.dflex}>
+                      <input placeholder='Mobile' />
+                      <input placeholder='Email Id' />
+                  </div>
+
+                  <p>Guest 2</p>
+                  <input placeholder='Name' />
+                  <div className={s.dflex}>
+                      <input placeholder='Mobile' />
+                      <input placeholder='Email Id' />
+                  </div>
+
+                  <p>Guest 3</p>
+                  <input placeholder='Name' />
+                  <div className={s.dflex}>
+                      <input placeholder='Mobile' />
+                      <input placeholder='Email Id' />
+                  </div>
+                </div>
+                
+              
+                
+                <div className={s.button} onClick={handleNext} > <div className={s.yBtn}  ></div> <h2>Next</h2></div>
             </div>
         </div>
        

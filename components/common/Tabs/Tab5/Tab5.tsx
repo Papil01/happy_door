@@ -1,15 +1,15 @@
 
 import { Image } from 'antd';
-import React, { useState } from 'react';
+import React from 'react';
 // import { Carousel } from 'antd';
-import s from "./Tab2.module.scss"
+import s from "./Tab5.module.scss"
 
 
 
 
 
-const Tab2 = ({handleNext}:props) => {
- const [count, setCount] = useState(0)
+const Tab5 = ({handleNext}:props) => {
+
     
   return (
        <div> 
@@ -36,13 +36,33 @@ const Tab2 = ({handleNext}:props) => {
              
             </div>
             <div className={s.details} >
-                <h1>Number of Guests</h1>
-                <div className={s.counter}  >
-                  <div onClick={()=>setCount(count-1)}>-</div>
-                  <div style={{width:"150px"}} >{count}</div>
-                  <div onClick={()=>setCount(count+1)} >+</div>
+                <h1>Summary</h1>
+                <div className={s.dform}  >
+                  <p>Guest 1</p>
+                  <input placeholder='Name' />
+                  <div className={s.dflex}>
+                      <input placeholder='Mobile' />
+                      <input placeholder='Email Id' />
+                  </div>
+
+                  <p>Guest 2</p>
+                  <input placeholder='Name' />
+                  <div className={s.dflex}>
+                      <input placeholder='Mobile' />
+                      <input placeholder='Email Id' />
+                  </div>
+
+                  <p>Guest 3</p>
+                  <input placeholder='Name' />
+                  <div className={s.dflex}>
+                      <input placeholder='Mobile' />
+                      <input placeholder='Email Id' />
+                  </div>
                 </div>
-                <div className={s.discount} > <Image src='/images/Group.png' /> <h3>10% Off on 10 0r more tickets</h3> </div>
+                
+                
+              
+                
                 <div className={s.button} onClick={handleNext} > <div className={s.yBtn} ></div> <h2>Next</h2></div>
             </div>
         </div>
@@ -52,4 +72,4 @@ const Tab2 = ({handleNext}:props) => {
   )
 }
 
-export default Tab2
+export default Tab5

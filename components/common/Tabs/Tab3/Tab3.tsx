@@ -37,9 +37,11 @@ const Tab3 = ({handleNext}:props) => {
             </div>
             <div className={s.details} >
                 <h1>What Dates are you going on?</h1>
-                <input placeholder='Name' />
-                <input placeholder='Mobile' />
-                <input placeholder='Email Id' />
+                <div>
+                 <button className={s.btn1}  >15th sept</button>
+                 <button className={s.btn2}  >16th sept</button> 
+                </div>
+              
                 <div className={s.button} onClick={handleNext} > <div className={s.yBtn} ></div> <h2>Next</h2></div>
             </div>
         </div>

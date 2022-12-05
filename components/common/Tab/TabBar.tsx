@@ -4,34 +4,35 @@ import Tab1 from '../Tabs/Tab1';
 import Tab2 from '../Tabs/Tab2';
 import Tab3 from '../Tabs/Tab3/Tab3';
 import Tab4 from '../Tabs/Tab4';
-
+import Tab5 from '../Tabs/Tab5';
 
 
 const TabBar = () => {
   const [tab ,setTab] = useState(0)
-  useEffect(()=>{
-    if(tab===0){}
-  },[tab])
+ 
   const handleNext =()=>{
     setTab(()=> tab+1 )
     console.log(tab)
   }
   return (
     <div  >
-      {/* <div>
-        <Tab1 handleNext={handleNext }  />
+      <div style={{display: tab===0? "block":"none"}} >
+        <Tab1  handleNext={handleNext }  />
       </div>
-      <div>
+      <div style={{display: tab===1? "block":"none"}} >
         <Tab2 handleNext={handleNext } />
       </div>
-      <div>
+      <div style={{display: tab===2? "block":"none"}} >
         <Tab3 handleNext={handleNext } />
       </div>
-      <div>
+      <div style={{display: tab===3? "block":"none"}} >
         <Tab4 handleNext={handleNext } />
-      </div> */}
+      </div>
+      <div style={{display: tab===4? "block":"none"}} >
+        <Tab5 handleNext={handleNext } />
+      </div>
 
-      {tab===0?<Tab1 handleNext={handleNext }  />:tab===1?<Tab2 handleNext={handleNext } />:tab===3?<Tab3 handleNext={handleNext } />:<Tab4 handleNext={handleNext } />}
+    
     </div>
   )
 }

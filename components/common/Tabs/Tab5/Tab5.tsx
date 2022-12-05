@@ -63,7 +63,7 @@ const Tab5 = ({handleNext}:props) => {
                 
               
                 
-                <div className={s.button} onClick={handleNext} > <div className={s.yBtn} ></div> <h2>Next</h2></div>
+                <div className={s.button}  > <div className={s.yBtn} ></div> <h2>Pay</h2></div>
             </div>
         </div>
        

@@ -5,14 +5,16 @@ import Tab2 from '../Tabs/Tab2';
 import Tab3 from '../Tabs/Tab3/Tab3';
 import Tab4 from '../Tabs/Tab4';
 import Tab5 from '../Tabs/Tab5';
-
+import {useRecoilState} from  "recoil"
+import dataState from '../Atom';
 
 const TabBar = () => {
   const [tab ,setTab] = useState(0)
- 
+  const [data, setdata] = useRecoilState(dataState);
   const handleNext =()=>{
     setTab(()=> tab+1 )
     console.log(tab)
+    console.log(data)
   }
   return (
     <div  >

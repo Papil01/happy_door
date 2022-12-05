@@ -106,10 +106,14 @@ line-height: 112%;
         border-radius: 15px;
         padding: 10px;
     }
-    & >.discount{
+    & .discount{
+        
           display: flex;
-          color: whitesmoke;
           margin-top: 450px;
+
+          & h3{
+            color: whitesmoke;
+          }
     }
 
  }
@@ -143,6 +147,8 @@ border-radius: 20px;
         align-self: flex-start;
         border-radius: 15px;
     }
+
+    
  }
 
  .counter{

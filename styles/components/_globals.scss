@@ -52,7 +52,7 @@ a {
 }
 // style for loader
 #nprogress .bar {
-  background: #000 !important;
+  // background: #000 !important;
   height: 0.2rem;
 }
 #nprogress .peg {
@@ -72,17 +72,17 @@ a {
   border: 1px solid #222222;
   > .ant-collapse-item {
     border: 0;
-    background-color: transparent;
+    // background-color: transparent;
   }
 }
 
 .defaut-collapse {
   .ant-collapse-content {
-    background-color: transparent;
+    // background-color: transparent;
     color: #fff;
   }
   .ant-collapse-header {
-    background-color: transparent;
+    // background-color: transparent;
     color: #fff !important;
     font-size: 18px;
     letter-spacing: 0.02em;

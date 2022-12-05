@@ -1,6 +1,6 @@
 
 import { Image } from 'antd';
-import React from 'react';
+import React, { useState } from 'react';
 // import { Carousel } from 'antd';
 import s from "./Tab2.module.scss"
 
@@ -9,7 +9,7 @@ import s from "./Tab2.module.scss"
 
 
 const Tab2 = ({handleNext}:props) => {
-
+ const [count, setCount] = useState(0)
     
   return (
        <div> 
@@ -37,9 +37,11 @@ const Tab2 = ({handleNext}:props) => {
             </div>
             <div className={s.details} >
                 <h1>Number of Guests</h1>
-                <input placeholder='Name' />
-                {/* <input placeholder='Mobile' />
-                <input placeholder='Email Id' /> */}
+                <div className={s.counter}  >
+                  <div onClick={()=>setCount(count-1)}>-</div>
+                  <div>{count}</div>
+                  <div onClick={()=>setCount(count+1)} >+</div>
+                </div>
                 <div className={s.discount} > <Image src='/images/Group.png' /> <h3>10% Off on 10 0r more tickets</h3> </div>
                 <div className={s.button} onClick={handleNext} > <div className={s.yBtn} ></div> <h2>Next</h2></div>
             </div>

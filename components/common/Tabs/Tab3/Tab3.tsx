@@ -3,14 +3,26 @@ import { Image } from 'antd';
 import React from 'react';
 // import { Carousel } from 'antd';
 import s from "./Tab3.module.scss"
-
-
+import {useState} from "react"
+import {useRecoilState } from "recoil"
+import dataState from '@components/common/Atom';
 
 
 
 const Tab3 = ({handleNext}:props) => {
+ const [date,setDate] = useState("")
+ const [data, setdata] = useRecoilState(dataState);
 
-    
+ const handleClick =(a:string)=>{
+  setDate(a)
+  let b ={
+    ...data ,
+    "Date":date
+  }
+
+  setdata(b)
+ }
+
   return (
        <div> 
         <div className={s.navbar} >
@@ -38,8 +50,8 @@ const Tab3 = ({handleNext}:props) => {
             <div className={s.details} >
                 <h1>What Dates are you going on?</h1>
                 <div>
-                 <button className={s.btn1}  >15th sept</button>
-                 <button className={s.btn2}  >16th sept</button> 
+                 <button className={s.btn1}  onClick={()=>handleClick("15th sept")} >15th sept</button>
+                 <button className={s.btn2}  onClick={()=>handleClick("16th sept")} >16th sept</button> 
                 </div>
               
                 <div className={s.button} onClick={handleNext} > <div className={s.yBtn} ></div> <h2>Next</h2></div>

@@ -1,16 +1,24 @@
 
 import { Image } from 'antd';
-import React, { useState } from 'react';
+import React, { useState ,useEffect } from 'react';
 // import { Carousel } from 'antd';
 import s from "./Tab2.module.scss"
-
+import {useRecoilState } from "recoil"
+import dataState from '@components/common/Atom';
 
 
 
 
 const Tab2 = ({handleNext}:props) => {
  const [count, setCount] = useState(0)
-    
+ const [data, setdata] = useRecoilState(dataState);
+ useEffect( ()=>{
+   let a ={
+    ...data,
+    "count" :count 
+   }
+   setdata(a)
+ },[count])  
   return (
        <div> 
         <div className={s.navbar} >

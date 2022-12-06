@@ -3,14 +3,28 @@ import { Image } from 'antd';
 import React from 'react';
 // import { Carousel } from 'antd';
 import s from "./Tab1.module.scss"
-
-
-
+import {useState} from "react"
+import {useRecoilState } from "recoil"
+import dataState from '@components/common/Atom';
 
 
 const Tab1 = ({handleNext}:props) => {
+const [name , setName] = useState("")
+const [mobile , setMobile] = useState("")
+const [email , setEmail] = useState("")
+const [data, setdata] = useRecoilState(dataState);
 
-    
+
+const handleClick= () =>{ 
+ let a ={...data ,
+    "Name":name ,
+    "Mobile":mobile,
+    "Email" :email
+}    
+   setdata(a)
+ handleNext();
+}
+
   return (
        <div> 
         <div className={s.navbar} >
@@ -37,10 +51,10 @@ const Tab1 = ({handleNext}:props) => {
             </div>
             <div className={s.details} >
                 <h1>Enter Details Here</h1>
-                <input placeholder='Name' />
-                <input placeholder='Mobile' />
-                <input placeholder='Email Id' />
-                <div className={s.button} onClick={handleNext} > <div className={s.yBtn} ></div> <h2>Next</h2></div>
+                <input onChange={(e)=>setName(e.target.value)}  placeholder='Name' />
+                <input onChange={(e)=>setMobile(e.target.value)} placeholder='Mobile' />
+                <input onChange={(e)=>setEmail(e.target.value)} placeholder='Email Id' />
+                <div className={s.button} onClick={handleClick} > <div className={s.yBtn} ></div> <h2>Next</h2></div>
             </div>
         </div>
        

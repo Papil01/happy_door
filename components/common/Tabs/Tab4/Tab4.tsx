@@ -1,16 +1,37 @@
 
 import { Image } from 'antd';
-import React from 'react';
+import React  from 'react';
+import {useState} from "react"
 // import { Carousel } from 'antd';
 import s from "./Tab4.module.scss"
-
+import {useRecoilState} from  "recoil"
+import dataState from '../../Atom';
 
 
 
 
 const Tab4 = ({handleNext}:props) => {
-
+  const [name , setName] = useState("")
+  const [mobile , setMobile] = useState("")
+  const [email , setEmail] = useState("")
+  const [data, setdata] = useRecoilState(dataState);
+     
+  const handleClick =()=>{
+    let guest1 = {
+      "Name":name,
+      "Mobile":mobile,
+      "Email":email
+    }
     
+     let a  = {
+      ...data,
+      "guest1": guest1
+
+     }  
+     console.log(guest1)
+     setdata(a)  
+     handleNext();
+  }
   return (
        <div> 
         <div className={s.navbar} >
@@ -39,10 +60,10 @@ const Tab4 = ({handleNext}:props) => {
                 <h1>Gueste Details</h1>
                 <div className={s.dform}  >
                   <p>Guest 1</p>
-                  <input placeholder='Name' />
+                  <input onChange={(e)=>setName(e.target.value)} placeholder='Name' />
                   <div className={s.dflex}>
-                      <input placeholder='Mobile' />
-                      <input placeholder='Email Id' />
+                      <input onChange={(e)=>setMobile(e.target.value)}  placeholder='Mobile' />
+                      <input onChange={(e)=>setEmail(e.target.value)}  placeholder='Email Id' />
                   </div>
 
                   <p>Guest 2</p>
@@ -62,7 +83,7 @@ const Tab4 = ({handleNext}:props) => {
                 
               
                 
-                <div className={s.button} onClick={handleNext} > <div className={s.yBtn}  ></div> <h2>Next</h2></div>
+                <div onClick={handleClick}  className={s.button} > <div className={s.yBtn}  ></div> <h2>Next</h2></div>
             </div>
         </div>
        
